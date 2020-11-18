@@ -1,0 +1,17 @@
+Classpath란 자바 가상머신이 실행할 때 class파일을 찾는데 그 때 기준이 되는 경로
+
+Project 루트 디렉터리의 config/에 설정파일을 넣으면 jar 로 패키징 할 때 config/ 안의
+설정파일들이 포함되지 않으므로 jar를 실행하는 폴더 혹은 그 밑의 config/ 디렉토리에 직접 설정파일을 넣어줘야 한다.
+
+src/main/resources의 properties/yml 파일은 패키징 될 때 classpath로 복사되므로
+별도의 config 파일을 밖으로 빼지 않아도 된다.
+
+jar 내부에 설정파일이 있어도 외부의 설정파일로 override 할 수 있다.
+우선순위는 다음과 같다.
+
+1. A /config subdirectory of the current directory
+2. The current directory
+3. A classpath /config package
+4. The classpath root
+
+https://www.baeldung.com/spring-properties-file-outside-jar

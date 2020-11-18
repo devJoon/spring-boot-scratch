@@ -1,0 +1,13 @@
+# 애플리케이션을 실행하면 다음 위치에 있는 application.properties/yml 설정 파일을 읽어 들인다.
+  # file:./config/        현재 디렉터리의 /config 서브 디렉터리
+  # file:./               현재 디렉터리
+  # classpath:/config/    클래스 경로의 /config 패키지
+  # classpath:/           클래스 경로의 루트 (src/main/resources의 파일은 빌드시 classpath로 위치)
+
+# 개발 환경, 프로덕션 환경 등 환경별로 설정을 나누고 싶은 경우에는 application-{profile}.properties/yml의 명명규칙을 따른다.
+
+# jar 단독 실행 시 -Dspring.profiles.active=test 와 같이 프로파일 설정
+spring:
+  profiles:
+    active: test # 미설정시 default
+
