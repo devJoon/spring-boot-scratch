@@ -1,3 +1,19 @@
-root:
-  user: joonhee
+aboutme:
+  name: joonhee
   id: jhl0824
+  age: 33
+  hobby: basketball
+  address: Seoul
+
+  occupation:
+    position: programmer
+    since: 2015
+
+    company:
+      name: KFTC
+      department: ITDev
+      team: SW Development team # space allowed(not recommanded?)
+      rank: assistant manager
+      previousTask:
+        - FileTransfer
+        - CFD
