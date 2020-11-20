@@ -19,3 +19,7 @@ https://www.baeldung.com/spring-properties-file-outside-jar
 config 파일에서 nested property를 로드할 때, 해당 property 를 내부 클래스로 지정 시
 static으로 선언해야 설정정보를 불러올 수 있다. 외부 클래스로 작성하면 static일 필요가 없다.
 (변수에 @NestedConfigurationProperty 어노테이션 추가 - but, 없어도 설정은 로드됨)
+
+@ConfigurationProperties가 명시된 bean은 relaxed binding을 사용하기 때문에
+bean property name 과 environment property name이 정확히 일치하지 않아도 된다.
+    -> camelCase, kebab-case, snake_case 모두 허용

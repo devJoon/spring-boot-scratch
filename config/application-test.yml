@@ -14,6 +14,6 @@ aboutme:
       department: ITDev
       team: SW Development team # space allowed(not recommanded?)
       rank: assistant manager
-      previousTask:
+      previousTask: # previous_task, previous-task 사용 가능
         - FileTransfer
         - CFD
