@@ -1,4 +1,4 @@
-package kr.or.kftc.scratch.configuration;
+package kr.or.kftc.scratch.bean;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

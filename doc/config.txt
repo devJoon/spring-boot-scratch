@@ -23,3 +23,12 @@ static으로 선언해야 설정정보를 불러올 수 있다. 외부 클래스
 @ConfigurationProperties가 명시된 bean은 relaxed binding을 사용하기 때문에
 bean property name 과 environment property name이 정확히 일치하지 않아도 된다.
     -> camelCase, kebab-case, snake_case 모두 허용
+
+Spring boot Junit 테스트 클래스에서 외부 설정파일을 읽으려면
+    1) @SpringBootTest의 properties 에 추가
+        @SpringBootTest(properties = "spring.config.location=file:config/device.yml")
+    2) @TestPropertySource 추가 (단, .properties 파일만 가능)
+        @TestPropertySource(locations = "file:config/device.properties")
+
+또한 설정파일과 매핑되는 클래스가 빈이 아니라면 테스트 클래스에서 어노테이션을 추가해줘야 한다.
+    - @EnableConfigurationProperties(Device.class)

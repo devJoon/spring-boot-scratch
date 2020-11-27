@@ -1,0 +1,5 @@
+device:
+  kind: smartphone
+  model: iPhone 12 Pro
+  storage: 512GB SSD
+  price: $1499.00

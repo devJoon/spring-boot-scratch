@@ -24,7 +24,7 @@ public class PropertyLogger  {
     /**
      * ContextRefreshedEvent가 발생하면 Environment/Configuration 변수를 key: value 형태로 출력
      */
-    @EventListener
+    // @EventListener
     public void handleContextRefresh(ContextRefreshedEvent event) {
         final Environment env = event.getApplicationContext().getEnvironment();
         LOGGER.info("====== Environment and configuration ======");
